@@ -1,0 +1,24 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure,figcaption{
+    margin:0;
+    padding:0;
+}
+body,html{
+    font-size:12px "微软雅黑"，Arial
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight:normal;
+    font-size:100%;
+}
+i,em{
+    font-style:normal
+}
+li{
+    list-style:none;
+}
+a{
+    color:#6b6b6b;
+    text-decoration: none;
+}
+input{
+    outline:none;
+}

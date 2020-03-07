@@ -1,0 +1,279 @@
+/* 导航 */
+#nav {
+    height: 50px;
+    background: #f9f9f9;
+    position: relative;
+}
+
+.nav_BX {
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.nav_BXleft {
+    width: 561px;
+    height: 50px;
+    float: left;
+}
+
+.nav_BXleft ul {
+    float: left;
+}
+
+.nav_BXleft ul li {
+    float: left;
+}
+
+.nav_BXleft ul li a {
+    font-size: 12px;
+    color: #afafaf;
+    line-height: 50px;
+    padding: 0 10px;
+}
+
+.nav_BXleft ul li span {
+    width: 1px;
+    height: 12px;
+    color: #d3d3d3;
+}
+
+.nav_BXleft ul li a:nth-child(1) {
+    padding-right: 12px;
+}
+
+.nav_BXleft ul li a:hover {
+    color: red;
+}
+
+.nav_BXright {
+    width: 528px;
+    height: 50px;
+    float: right;
+
+}
+
+.nav_BXright ul {
+    float: left;
+}
+
+.nav_BXright ul li {
+    float: left;
+}
+
+.nav_BXright ul li a {
+    font-size: 12px;
+    color: #afafaf;
+    line-height: 50px;
+    padding: 0 10px;
+}
+
+.nav_BXright ul li span {
+    width: 1px;
+    height: 12px;
+    color: #d3d3d3;
+}
+
+.nav_BXright ul li:nth-child(1) a {
+    padding: 0;
+    margin-right: 8px;
+}
+
+.nav_BXright ul li:nth-child(6) {
+    width: 114px;
+    height: 50px;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+.nav_BXright ul li a:hover {
+    color: red;
+}
+
+/* .nav_BXright ul li a:nth-child(3):hover .kf{
+    display:block;
+} */
+.kf {
+    position: absolute;
+    left: 1008px;
+    top: 50px;
+    width: 89px;
+    height: 90px;
+    font-size: 12px;
+    color: #afafaf;
+    padding-left: 5px;
+    line-height: 26px;
+    display: none;
+}
+
+.wz {
+    position: absolute;
+    top: 50px;
+    left: 358px;
+    width: 816px;
+    height: 203px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    /*  background:red; */
+    display: none;
+}
+
+.ewm {
+    position: absolute;
+    top: 50px;
+    left: 968px;
+    width: 282px;
+    height: 488px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    display: none;
+}
+
+.ewm_top {
+    height: 160px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.ewm_topleft {
+    width: 112px;
+    height: 112px;
+    padding-top: 25px;
+    padding-left: 34px;
+}
+
+.ewm_topleft img {
+    width: 100%;
+    height: 100%;
+}
+
+.ewn_centent {
+    height: 160px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.ewn_cententleft {
+    width: 112px;
+    height: 112px;
+    padding-top: 25px;
+    padding-left: 34px;
+}
+
+.ewn_cententleft img {
+    width: 100%;
+    height: 100%;
+}
+
+.ewm_bottom {
+    height: 160px;
+
+}
+
+.ewm_bottomleft {
+    width: 112px;
+    height: 112px;
+    padding-top: 25px;
+    padding-left: 34px;
+}
+
+.ewm_bottomleft img {
+    width: 100%;
+    height: 100%;
+}
+
+.gwc {
+    position: absolute;
+    left: 836px;
+    top: 50px;
+    width: 528px;
+    height: 280px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+}
+
+.dgwc {
+    width: 100px;
+    height: 100px;
+    background: url(../images/icon-header.png) no-repeat 0px -167px;
+    margin-top: 50px;
+    margin-left: 214px;
+}
+
+.gwc>p {
+    margin-top: 20px;
+    color: #d3d3d3;
+}
+
+#content{
+    width:100%;
+    background: #ccc;
+}
+.content_BX{
+    width:1200px;
+    min-height: 600px;
+    margin:0 auto;
+    padding-top:30px ;
+}
+.content_BXz{
+    width:1200px;
+    min-height: 600px;
+    background: #fff;
+}
+
+.title{
+    width: 800px;
+    margin: 20px auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+.title:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.title li{
+    width: 130px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+    border-right: 2px solid #AABBCC;
+}
+.title li:last-child{
+    border-right: none;
+}
+.line{
+    width: 800px;
+    margin: 20px auto;
+}
+.carts{
+    width: 800px;
+    margin: 20px auto;
+    border: 3px solid #CCCCCC;
+}
+.carts .title{
+    height: 120px;
+}
+.carts .title li{
+    height: 120px;
+    line-height: 120px;
+    border-bottom: 2px dotted #CCCCCC;
+    border-top: 2px dotted #CCCCCC;
+    margin-bottom: 5px;
+}
+.carts .title li img{
+    height: 100px;
+}
+.carts .title li p{
+    padding: 5px 0;
+}
+.carts .title li input[type=button]{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+#footer li{
+    width: 180px;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆页</title>
+    <link rel="stylesheet" type="text/css" href="./css/publice.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/login.css"/>
+</head>
+<body>
+    <div id="head">
+        <div class="head_BX">
+            <div class="head_BXone">
+                <img src="https://id1.cloud.huawei.com/CAS/up/idmw_rss_46/logos/HUAWEI.svg"/>
+            </div>
+            <div class="head_BXtwo">
+                <b>|</b>
+                <b>华为商城</b>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div id="nav">
+        <span>依据《网络安全法》，为保障您的帐号安全与正常使用，请尽快绑定您的手机号，感谢您的理解及支持！</span>
+    </div>
+    <div id="log_img">
+        <div class="log_imgBX">
+            <div class="log_imgBXone">
+                <img src="https://id1.cloud.huawei.com/CAS/up/idmw_rss_46/ads/login_default_bg.png"/>
+            </div>
+            <div class="log_imgBXtwo">
+                <div class="log_imgBXtwo1">
+                    <span>帐号登录</span>
+                    <span>扫码登录</span>
+                </div>
+                <div class="log_imgBXtwo2">
+                 <!--  <form action="php/login.php" method="POST"> -->
+                        <div class="log_imgBXtwo2small">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="text" placeholder="手机号/邮件地址/华为号" name="uname" id="uname"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="password" placeholder="密码" name="pwd" id="pwd"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           <span title="短信验证码登录">短信验证码登录</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="submit" value="登陆" class="gl"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="token" name="token"/>&nbsp;&nbsp;记住华为账号
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="t_l">
+                                                <span class="regist">
+                                                    <a href="#" title="注册帐号">注册帐号</a>
+                                                </span>
+                                                <span class="forgot">
+                                                    <a href="#" title="忘记密码？">忘记密码？</a>
+                                                </span>
+                                                <span class="t_r">
+                                                    <a href="#" title="更多">更多</a>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+             <!--  </form> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="jquery/jquery.min.js"></script>
+<script src="js/cookie.js"></script>
+<script>
+          
+
+
+
+    $(".gl").click(function(){
+
+        if($(".token").attr("checked")){
+         console.log(1);
+        var date = new Date();
+        date=date.setDate(date.getDate()+10);
+        console.log(date);
+        setCookie("token",new Date().getTime(),date,"/1918dom/xiangmu");
+    }
+
+
+      $.ajax({
+          url:"php/login.php",
+          type:"post",
+          data:{
+              uname:$("#uname").val(),
+              pwd:$("#pwd").val()
+          },
+          success:function(res){
+             /*  1 成功 2 密码错误 3用户名不存在 */
+             if(res == 1){
+                 alert("登陆成功");
+                 location.href="index.html";
+             }
+             if(res == 2){
+                 alert("密码错误");
+             }
+             if(res == 3){
+                 alert("用户名不存在");
+             }
+             console.log(res)
+          }
+      })
+})
+</script>
+</html>
